@@ -19,20 +19,20 @@ If it detects a change between checks, it sends the full output via a Discord we
 ## Docker Compose
 
 ```
+version: '3.8'
 services:
-  zfs_monitor:
-    container_name: zfs-monitor
-    image: zfs-monitor
+  zfsminimonitor:
+    container_name: zfsminimonitor
+    image: ghcr.io/zewol95/zfsminimonitor:1.0
     privileged: true
     network_mode: bridge
     environment:
-      - ZPOOL_NAME=<name_of_zpool>                       # ENTER HERE YOUR ZPOOL NAME
-      - WEBHOOK_URL=<web_url_of_your_Discord_Webhook>    # ENTER HERE YOUR WEBHOOK URL
-      - CHECK_INTERVAL=60                                # ENTER HERE THE TIME BETWEEN CHECKS (SUGGESTED 60s)
+      - ZPOOL_NAME=<YOUR_TANK_NAME>                # Insert here your zpool name
+      - WEBHOOK_URL=<YOUR_DISCORD_WEBHOOK_URL>     # Insert here your Discord Webhook url
+      - CHECK_INTERVAL=10                          # Time in seconds between checks
     volumes:
       - /dev:/dev
       - /proc:/proc
     restart: unless-stopped
-```
 
-jjj
+```
