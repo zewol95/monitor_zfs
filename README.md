@@ -1,9 +1,9 @@
 # zfsMiniMonitor
+A Docker-based solution for monitor the status of your ZFS zpool and send notifications via Discord webhook.
 
-## What is?
-A Docker-based solution for monitor the status of your ZFS zpool and send notifications via a Discord webhook. \
-
-
+## How it works?
+The script continuously monitors the zpool (based on the `ZPOOL_NAME` variable) at regular intervals (defined by the `CHECK_INTERVAL` variable). \
+If it detects a change between checks, it sends the full output via a Discord webhook (using the `WEBHOOK_URL` variable).
 
 ## Features
 - Runs entirely within a Docker container for simplicity and portability.
