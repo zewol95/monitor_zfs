@@ -36,3 +36,44 @@ services:
     restart: unless-stopped
 
 ```
+
+## Logs
+Opening the console log for see what the script is doing: \
+The zpool is ONLINE: \
+```
+[02-01-2025 18:14:28] Zpool 'tanktest' status: ONLINE
+```
+\
+The zpool is DEGRADED: \
+```
+'tanktest' status: DEGRADED
+Message sent successfully: [02-01-2025 18:16:43] Warning: Zpool 'tanktest' is in state DEGRADED
+Details:
+  pool: tanktest
+ state: DEGRADED
+status: Mismatch between pool hostid and system hostid on imported pool.
+	This pool was previously imported into a system with a different hostid,
+	and then was verbatim imported into this system.
+action: Export this pool on all systems on which it is imported.
+	Then import it to correct the mismatch.
+   see: http://zfsonlinux.org/msg/ZFS-8000-EY
+  scan: resilvered 40.5K in 0 days 00:01:34 with 0 errors on Tue Dec 31 11:03:57 2024
+
+config:
+
+	NAME                                              STATE     READ WRITE CKSUM
+
+	tanktest                                          DEGRADED     0     0     0
+
+	  mirror-0                                        DEGRADED     0     0     0
+
+	    usb-_USB_DISK_2.0_07001A56ECA03571-0:0-part1  OFFLINE      0     0     0
+
+	    usb-_USB_DISK_2.0_07001A6194AB4809-0:0-part1  ONLINE       0     0     0
+
+errors: No known data errors
+```
+
+
+
+
