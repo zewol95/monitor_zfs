@@ -16,7 +16,7 @@ If it detects a change between checks, it sends the full output via a Discord we
 - ZFS installed on the host system
 - Discord Webhook url
 
-## Docker Compose
+## Install via Docker Compose
 
 ```
 version: '3.8'
@@ -37,16 +37,16 @@ services:
 
 ```
 
-## Logs
-Opening the console log for see what the script is doing: \
-The zpool is ONLINE: \
+## Logs in Docker
+Open the console log for see what the script is detecting: \
+The zpool is ONLINE: 
 ```
 [02-01-2025 18:14:28] Zpool 'tanktest' status: ONLINE
 ```
 \
-The zpool is DEGRADED: \
+The zpool is DEGRADED: 
 ```
-'tanktest' status: DEGRADED
+[02-01-2025 18:16:43] Zpool 'tanktest' status: DEGRADED
 Message sent successfully: [02-01-2025 18:16:43] Warning: Zpool 'tanktest' is in state DEGRADED
 Details:
   pool: tanktest
@@ -73,7 +73,12 @@ config:
 
 errors: No known data errors
 ```
-
+## The Discord's messagge
+The zpool is back ONLINE: \
+![Testo alternativo](image/message_online.PNG)
+\
+The zpool is DEGRADED: \
+![Testo alternativo](image/message_degraded.PNG)
 
 
 
