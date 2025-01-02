@@ -1,6 +1,8 @@
-# What is zfsMiniMonitor
+# zfsMiniMonitor
 
-A Docker-based solution to monitor the status of your ZFS zpool and send notifications via a Discord webhook. \
+## What is?
+A Docker-based solution for monitor the status of your ZFS zpool and send notifications via a Discord webhook. \
+
 
 
 ## Features
