@@ -14,6 +14,7 @@ If it detects a change between checks, it sends the full output via a Discord we
 ## Requirements
 - Docker and Docker Compose
 - ZFS installed on the host system
+- Discord Webhook url
 
 ## Docker Compose
 
