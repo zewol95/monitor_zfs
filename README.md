@@ -81,4 +81,5 @@ The zpool is DEGRADED: \
 ![Testo alternativo](image/message_degraded.PNG)
 
 
-
+## Multi Zpool use
+Warning: The script is not tested in a multi zpool system.
